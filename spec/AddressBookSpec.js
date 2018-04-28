@@ -1,9 +1,15 @@
 
 describe('Address Book', function () {
-    it('should be able add a contact', function () {
 
-        var addressBook = new AddressBook(),
+    var addressBook,
+        thisContact;
+
+    beforeEach(function () {
+        addressBook = new AddressBook(),
             thisContact = new Contact();
+    })
+
+    it('should be able add a contact', function () {
 
         addressBook.addContact(thisContact);
 
@@ -11,9 +17,6 @@ describe('Address Book', function () {
     });
 
     it('should be able to delete a contact', function () {
-
-        var addressBook = new AddressBook(),
-            thisContact = new Contact();
 
         addressBook.addContact(thisContact);
         addressBook.deleteContact(0);
